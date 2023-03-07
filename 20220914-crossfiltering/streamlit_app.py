@@ -65,7 +65,7 @@ def build_bill_to_tip_figure(df: pd.DataFrame) -> go.Figure:
             "tip",
             "day",
         ],
-        height=800,
+        height=1000,
     )
     fig.update_layout(paper_bgcolor="#FFFFFF", plot_bgcolor="#FFFFFF")
     fig.update_xaxes(gridwidth=0.1, gridcolor="#EDEDED")
@@ -74,7 +74,7 @@ def build_bill_to_tip_figure(df: pd.DataFrame) -> go.Figure:
 
 
 def build_size_to_time_figure(df: pd.DataFrame) -> go.Figure:
-    return px.density_heatmap(df[df["selected"] == True], "size", "time", height=400)
+    return px.density_heatmap(df[df["selected"] == True], "size", "time", height=500)
 
 
 def build_day_figure(df: pd.DataFrame) -> go.Figure:
@@ -87,7 +87,7 @@ def build_day_figure(df: pd.DataFrame) -> go.Figure:
             "selected": [True, False],
             "day": ["Thur", "Fri", "Sat", "Sun"],
         },
-        height=400,
+        height=500,
     )
 
 
